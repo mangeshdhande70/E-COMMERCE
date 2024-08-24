@@ -1,0 +1,36 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: notification-service
+    
+
+
+#server:
+#  port: 9994
+#  
+#  
+#spring:
+#  mail:
+#    properties:
+#      mail:
+#        smtp:
+#          starttls:
+#            enable: true
+#          auth: true
+#    host: smtp.gmail.com
+#    username: mdmangesh70@gmail.com
+#    password: omjnltcwrbnvttpx
+#    port: 587
+#
+#
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql:///ecommerce
+#    username: root
+#    password: Md7$#1998
+#    
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.MySQL8Dialect  

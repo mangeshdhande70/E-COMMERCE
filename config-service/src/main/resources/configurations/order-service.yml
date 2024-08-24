@@ -1,0 +1,36 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 9997
+  
+  
+  
+  
+spring:  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///ecommerce
+    username: root
+    password: Md7$#1998
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: orderConfirmation:ecommerce.object_jars.dto.OrderConfirmation 
+        
+        
+application:
+  config:
+    customer-url: http://localhost:9999/api/v1/customers
+    payment-url: http://localhost:9999/api/v1/payments
+    product-url: http://localhost:9999/api/v1/products         
